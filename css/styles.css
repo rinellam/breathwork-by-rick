@@ -5,6 +5,8 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito', sans-serif;
 */
 
+/* Global */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +17,17 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 a:hover {
     text-decoration: underline;
 }
 
-:focus {
-    background: yellow;
+a:focus {
+    outline-color: #B44188;
 }
 
 html {
@@ -31,6 +38,8 @@ html {
     color: #1a1a1a;
     margin: 0;
   }
+
+/* Header & Navigation */
 
 .logo-container {
     display: flex;
@@ -77,12 +86,14 @@ html {
 .navigation-list li {
     margin-left: 1em;
 }
+
+/* Banner Image and Text */
   
 .banner-img {
     position: relative;
     width: 100%;
     height: auto;
-    margin-bottom: 4em;
+    margin-bottom: 5em;
     text-align: center;
     color: #ffffff;
 }
@@ -105,53 +116,53 @@ html {
     right: 1em;
     text-transform: uppercase;
   }
+
+/* Main Content */
   
 main {
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
-  
-img {
-    width: 100%;
+
+/* Cards */
+
+.card-img {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5em;
+}
+
+.card-img-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom: 5em;
+}
+
+/* card Images */ 
+
+.img-margin-left,
+.img-margin-right {
+    min-width : 200px;
+    width: 35%;
     height: auto;
+}
+
+.img-margin-left {
+    margin-left: 2em;
 }
   
 .img-margin-right {
     margin-right: 2em;
 }
-  
-.img-margin-left {
-    margin-left: 2em;
-}
 
-.img-margin-left,
-.img-margin-right {
-    min-width : 450px;
-    width: 100%;
-    height: auto;
-}
+/* Card Text */
   
 .card-text-contain {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-  
-.card-img {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 4em;
-}
-  
-.card-copy {
-    margin-top: 0;
-}
-  
-.card-img-reverse {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    margin-bottom: 4em;
+    width: 64%;
 }
   
 .card-heading {
@@ -162,8 +173,8 @@ img {
   
 .card-text {
     background:#E2C977;
-    padding: 3em;
-    margin-bottom: 4em;
+    padding: 3em 5em;
+    margin-bottom: 5em;
 }
 
 /* footer */
@@ -181,16 +192,30 @@ footer {
     align-items: center;
     padding: 6em 0;
 }
+
+/* Footer Nav Text */
   
 .navigation-footer {
     text-transform: uppercase; 
 
 }
 
+/* Footer Text */
+
 .copy-footer {
     color: #ffffff;
     font-size: 1.2rem;
 }
+
+.copy-footer-terms,
+#auto-date {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: rgba(255,255,255, 0.2);
+
+}
+
+/* Social Media Icons */
 
 .fa {
     font-size: 48px!important;
@@ -209,21 +234,15 @@ footer {
     color: rgba(255,255,255, 0.5);
 }
 
-.copy-footer-terms {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    color: rgba(255,255,255, 0.2);
-
+.footer-date-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 1024px) {
+/* Media Queries */
 
-        .img-margin-left, 
-        .img-margin-right {
-            min-width: 300px;
-            width: 100%;
-            height: auto;
-        }
+    @media only screen and (max-width: 1024px) {
 
         .banner-copy-centered {
             font-size: 1.6rem;
@@ -238,9 +257,20 @@ footer {
         .navigation-list {
             display: none;
         }
+
+        .img-margin-left,
+        .img-margin-right {
+            width: 100%;
+            height: auto;
+}
      
         .card-text-contain {
             flex-direction: column;
+            width: 100%;
+        }
+
+        .card-heading {
+            font-size: 1.8rem;
         }
 
         .banner-copy-top-right {
@@ -289,19 +319,12 @@ footer {
         }
 
         .card-heading {
-            font-size: 30px;
+            font-size: 1.6rem;
         }
 
         main {
             width: 90%;
             margin: 0 auto;
-        }
-
-        .img-margin-left,
-        .img-margin-right {
-            min-width: 200px;
-            width: 100%;
-            height: auto;
         }
 
         .card-text {
@@ -323,10 +346,12 @@ footer {
             display: none;
         }
 
+        .card-heading {
+            font-size: 1.4rem;
+        }
+
         .banner-copy-top-right {
-            font-size: 1rem;
-            top: 0.25em;
-            right: 1em;
+            display: none;
           }
 
         .banner-copy-centered {
@@ -337,5 +362,13 @@ footer {
         .banner-img {
             margin-bottom: 2em;
         }
+    }
+
+    @media only screen and (max-width: 414px) {
+
+        .card-heading {
+            font-size: 1.2rem;
+        }
+
     }
 

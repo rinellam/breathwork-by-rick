@@ -35,7 +35,7 @@
         </header>
         <!-- banner image-->
         <section class="banner-img">
-            <img src="/img/banner-image-gel-1366x640.png" alt="Image of young women blowing a dandelion flower with the pedals falling away">
+            <img src="/img/breathwork-banner-img-1366x700-min.png" alt="Image of young women blowing a dandelion flower with the pedals falling away">
             <h2 class="banner-copy-top-right">Home</h2>
             <h2 class="banner-copy-centered">Connect With Your “Higher Self,”<br/>
                 Remove Emotional Blocks,<br/>
@@ -93,9 +93,18 @@
                     <a href="#"></a><i class="fa fa-instagram"></i></a>
                 </div>
 
-                <p class="copy-footer-terms">Breathwork By Rick © 2020</p>
+                <div class="footer-date-contain">
+                    <p class="copy-footer-terms">Breathwork By Rick ©&nbsp;</p>
+                    <p id="auto-date"></p>
+                </div>
+
           </footer>
         
-        <script src="" async defer></script>
+          <script>
+              //date for tagline in footer
+            let d = new Date();
+            let n = d.getFullYear();
+            document.getElementById("auto-date").innerHTML = n;
+          </script>
     </body>
 </html>
