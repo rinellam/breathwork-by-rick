@@ -12,11 +12,21 @@ font-family: 'Nunito', sans-serif;
 
 a {
     color: #B44188;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:focus {
+    background: yellow;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.5;
     color: #1a1a1a;
     margin: 0;
@@ -36,22 +46,27 @@ html {
 
 .logo-text {
     font-family: 'Nunito', sans-serif;
-    font-size: 18px;
+    font-size: 1.2rem;
     padding-left: 1em;
     text-transform:none;
     color: #a4866a;
 }
   
-navigation {
+.navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-left: 2em;
     padding-right: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.navigation-text {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
 }
   
 .navigation-list {
@@ -75,10 +90,20 @@ navigation {
 .banner-copy-centered {
     position: absolute;
     font-family: 'Merriweather', serif;
-    font-size: 2.2rem;
-    top: 40%;
+    font-size: 2.4rem;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.banner-copy-top-right {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: rgba(255,255,255, 0.5);
+    top: 1em;
+    right: 1em;
+    text-transform: uppercase;
   }
   
 main {
@@ -131,7 +156,7 @@ img {
   
 .card-heading {
     font-family: 'Merriweather', serif;
-    font-size: 36px;
+    font-size: 2rem;
     margin-top: 0;
 }
   
@@ -140,55 +165,86 @@ img {
     padding: 3em;
     margin-bottom: 4em;
 }
+
+/* footer */
   
 footer {
     background: #1a1a1a;
-    height: 400px;
+    height: 300px;
 }
-  
-.navigation-footer {
-    text-transform: uppercase; 
-    margin-top: 2em;
-}
-  
+
 .footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 2em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6em 0;
+}
+  
+.navigation-footer {
+    text-transform: uppercase; 
+
+}
+
+.copy-footer {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.fa {
+    font-size: 48px!important;
 }
 
 .fa-facebook-square,
 .fa-instagram {
-    margin: 0 auto;
-    color: #ffffff;
+    color: rgba(255,255,255, 0.9);
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
-.fa {
-    font-size: 42px!important;
-}
-  
-.copy-footer {
-    color: #ffffff;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    text-transform: uppercase;
+.fa-facebook-square:hover,
+.fa-instagram:hover {
+    color: rgba(255,255,255, 0.5);
 }
 
 .copy-footer-terms {
     font-family: 'Nunito', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     color: rgba(255,255,255, 0.2);
-    margin-top: 5em;
 
 }
 
-  
+@media only screen and (max-width: 1024px) {
+
+        .img-margin-left, 
+        .img-margin-right {
+            min-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-copy-centered {
+            font-size: 1.6rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 
     @media only screen and (max-width: 768px) {
+
+        .navigation-list {
+            display: none;
+        }
      
         .card-text-contain {
             flex-direction: column;
+        }
+
+        .banner-copy-top-right {
+            font-size: 1.5rem;
         }
 
         .banner-copy-centered {
@@ -206,9 +262,23 @@ footer {
         .img-margin-left {
             margin-left: 0;
         }
+
+        .img-margin-left,
+        .img-margin-right {
+            margin-bottom: 2em;
+        }
     }
 
     @media only screen and (max-width: 600px) {
+
+        .logo-img {
+            width: 75px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 14px;
+        }
 
         .navigation-list {
             display: none;
@@ -232,7 +302,6 @@ footer {
             min-width: 200px;
             width: 100%;
             height: auto;
-            margin-bottom: 2em;
         }
 
         .card-text {
@@ -242,3 +311,31 @@ footer {
         }
     
     }
+
+    @media only screen and (max-width: 414px) {
+
+        .navigation {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .banner-copy-top-right {
+            font-size: 1rem;
+            top: 0.25em;
+            right: 1em;
+          }
+
+        .banner-copy-centered {
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .banner-img {
+            margin-bottom: 2em;
+        }
+    }
+
