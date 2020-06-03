@@ -10,27 +10,38 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/styles.css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="navigation">
+        <header class="header">
 
                 <div class="logo-container">
                     <img class="logo-img img-contain" src="/img/breathwork-by-rick-logo.png" alt="Image of the Breathwork By Rick logo">
                     <p class="logo-text">Breathwork By Rick</p>
                 </div>
 
-                <div class="navigation-contain">
-                <p class="navigation-text">
-                    <ul class="navigation-list">
-                        <li><a href="#">Classes Calendar</a></li>
-                        <li><a href="#">Contact</a></li>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+                <nav class="nav"> 
+                    <button aria-label="Close navigation" class="close-nav">&times;</button>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                     </ul>
-                </p>
-                </div>
+                </nav>
+
+                <!-- Hide nav
+                <div class="navigation-contain">
+                        <p class="navigation-text">
+                            <ul class="navigation-list">
+                                <li><a href="#">Classes Calendar</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </p>
+                </div>-->
      
         </header>
         <!-- banner image-->
@@ -72,6 +83,11 @@
                     Ho’oponopono in its simplest form is “ a way of life.” By repeating four short phrases which are only a few words: “I’m sorry, forgive me, thank you, I love you.” Miracle’s begin to appear in your life! Ho’oponopono seems simple enough, but once integrated into daily practice changes your entire understanding of how “life” works!</p>
             </section>
             
+            <!-- Carousel start -->
+ 
+            <!-- Carousel End -->
+    
+
             <section class="card-img">
                 <img class="img-margin-right" src="/img/breathwork-by-rick-img-why-it-matters-550x400-min.png">
                     <div class="card-text-contain">
@@ -82,11 +98,12 @@
           </main>
           
           <footer class="footer-content">
-                <p class="navigation-text">
-                    <a href="#">Classes Calendar</a><br/>
-                    <a href="#">Contact</a>
-                </p>
-          
+              
+                <ul class="nav-list-footer">
+                    <li class="nav-item"><a href="#" class="nav-link-footer">Calendar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link-footer">Contact</a></li>
+                </ul>
+           
                 <div class="social-media-icons">
                     <p class="copy-footer">Connect With Me:</p>
                     <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -106,5 +123,8 @@
             let n = d.getFullYear();
             document.getElementById("auto-date").innerHTML = n;
           </script>
+
+        <script src="/js/menu-script.js"></script>
+        
     </body>
 </html>
