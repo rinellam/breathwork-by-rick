@@ -11,7 +11,7 @@ font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
 img {
     width: 100%;
@@ -38,7 +38,7 @@ html {
     line-height: 1.5;
     color: #1a1a1a;
     margin: 0;
-  }
+}
 
 /* Header & Navigation */
 
@@ -64,88 +64,87 @@ html {
 
 /* Navigation */
   
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2em;
-    }
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
 
-    .open-nav,
-    .close-nav {
-        display: none;
-    }
+.open-nav,
+.close-nav {
+    display: none;
+}
     
-    .nav {
-        position: initial;
-    }
+.nav {
+    position: initial;
+}
     
-    .nav-list {
-        display: flex;
-        flex-direction: row;
-        text-transform: uppercase;
-        letter-spacing: 0.15rem;
-    }
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
 
-    .nav-link-footer {
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-        letter-spacing: 0.15rem;
-    }
+.nav-link-footer {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
 
-    .nav-list li {
-        list-style: none;
-    }
+.nav-list li {
+    list-style: none;
+}
     
-    .nav-item {
-        margin-left: 1em;
-    }
+.nav-item {
+    margin-left: 1em;
+}
     
-    .nav-link {
-        font-size: 1rem;
-    }
+.nav-link {
+    font-size: 1rem;
+}
     
-    .header-home .nav {
-        background: transparent;
-    }
+.header-home .nav {
+    background: transparent;
+}
 
-    /*.current {
-        color: #1a1a1a;
-        border-bottom: 2px solid black;
-    }*/
+.current,
+.current a {
+    color: #1a1a1a;
+    font-weight: 700;
+    text-decoration: none;
+}
 
 
 /* Banner Image and Text */
-  
+
 .banner-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 5em;
-    text-align: center;
-    color: #ffffff;
+    background-image: url('/img/breathwork-banner-img-1366x700-min.png');
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 6em;
+
+    
 }
 
 .banner-copy-centered {
-    position: absolute;
+    position: relative;
     font-family: 'Merriweather', serif;
-    font-size: 2.4rem;
-    top: 45%;
+    font-size: 3rem;
+    width: 50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
 }
 
-.banner-copy-top-right {
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: rgba(255,255,255, 0.5);
-    top: 1em;
-    right: 1em;
-    text-transform: uppercase;
-  }
 
 /* Main Content */
   
@@ -159,14 +158,14 @@ main {
 .card-img {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
 }
 
 .card-img-reverse {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
 }
 
 /* card Images */ 
@@ -204,14 +203,14 @@ main {
 .card-text {
     background:#E2C977;
     padding: 3em 5em;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
 }
 
 /* footer */
   
 footer {
     background: #1a1a1a;
-    height: 300px;
+    height: 400px;
 }
 
 .footer-content {
@@ -262,22 +261,39 @@ footer {
     justify-content: space-evenly;
 }
 
-/* Carousel */
-
-
 /* Media Queries */
 
     @media only screen and (max-width: 1024px) {
 
         .banner-copy-centered {
-            font-size: 1.6rem;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            font-size: 2.8rem;
+        }
+
+        .card-text-contain {
+            width: 60%;
+        }
+
+        .img-margin-left,
+        .img-margin-right {
+            width: 40%;
         }
     }
 
     @media only screen and (max-width: 768px) {
+
+        .logo-text {
+            font-size: 1rem;
+        }
+
+        .banner-img {
+            width: 100vw;
+            height: 80vh;
+            background-position: right 72% top;
+        }
+
+        .banner-copy-centered {
+            font-size: 2.6rem;
+        }
 
         .img-margin-left,
         .img-margin-right {
@@ -293,34 +309,40 @@ footer {
         .card-heading {
             font-size: 1.8rem;
         }
-
-        .banner-copy-top-right {
-            font-size: 1.5rem;
-        }
-
-        .banner-copy-centered {
-            font-size: 1.3rem;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
      
         .card-img,
         .card-img-reverse {
             flex-direction: column;
         }
-     
-        .img-margin-left {
-            margin-left: 0;
+
+        .banner-img,
+        .card-img,
+        .card-img-reverse,
+        .card-text {
+            margin-bottom: 5em;
+        }
+
+        .card-text {
+        padding: 2em;
         }
 
         .img-margin-left,
         .img-margin-right {
+            margin-top: 0;
+            margin-right: 0;
             margin-bottom: 2em;
+            margin-left: 0;
         }
+
     }
 
     @media only screen and (max-width: 600px) {
+
+        .banner-img {
+            width: 100vw;
+            height: 100vh;
+            background-position: right 80% top;
+        }
 
         header {
             padding: 2em;
@@ -331,16 +353,12 @@ footer {
             height: auto;
         }
 
-        .logo-text {
-            font-size: 14px;
-        }
-
         .navigation-list {
             display: none;
         }
 
         .banner-copy-centered {
-            font-size: 1rem;
+            font-size: 2rem;
         }
 
         .card-heading {
@@ -352,11 +370,7 @@ footer {
             margin: 0 auto;
         }
 
-        .card-text {
-            background: gold;
-            padding: 1.5em;
-            margin-bottom: 4em;
-        }
+       
 
         /* new navigation */
 
@@ -369,6 +383,7 @@ footer {
             position: fixed;
             background: #1a1a1a;
             width: 100%;
+            height: 100vh;
             top: 0;
             right: 0;
             bottom: 0;
@@ -402,13 +417,14 @@ footer {
         
         .nav-link:hover,
         .nav-link:focus {
+            color: #FFFFFF;
             text-decoration: underline;
         }
         
         .close-nav {
             border: 0;
             background: 0;
-            color: #B44188;;
+            color: #B44188;
             font-weight: 700;
             font-size: 3rem;
             cursor: pointer;
@@ -417,7 +433,7 @@ footer {
         }
         
         .close-nav:hover {
-            color: rgba(180,65,136,0.7);
+            color:#FFFFFF;
         }
         
         .open-nav {
@@ -429,10 +445,22 @@ footer {
             margin-left: auto;
             font-size: 2em;
         }
-    
+
     }
 
     @media only screen and (max-width: 414px) {
+
+        .banner-img {
+            width: 100vw;
+            height: 85vh;
+            background-position: right 76% top;
+        }
+
+        .banner-copy-centered {
+            font-size: 1.6rem;
+            width: 65%;
+            top: 40%;
+        }
 
         header {
             padding: 2em 1em;
@@ -442,21 +470,30 @@ footer {
             font-size: 1.4rem;
         }
 
-        .banner-copy-top-right {
-            display: none;
-          }
-
-        .banner-copy-centered {
-            font-size: 1rem;
-            width: 100%;
+        .banner-img,
+        .card-img,
+        .card-img-reverse,
+        .card-text {
+            margin-bottom: 3em;
         }
 
-        .banner-img {
-            margin-bottom: 2em;
+        .img-margin-left,
+        .img-margin-right {
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 1em;
+            margin-left: 0;
         }
+        
     }
 
-    @media only screen and (max-width: 365px) {
+    @media only screen and (max-width: 375px) {
+
+        .banner-img {
+            width: 100vw;
+            height: 85vh;
+            background-position: right 76% top;
+        }
 
         .card-heading {
             font-size: 1.2rem;
@@ -466,5 +503,20 @@ footer {
             display: none;
         }
 
+    }
+
+    @media only screen and (max-width: 360px) {
+
+        .banner-img {
+            width: 100vw;
+            height: 85vh;
+            background-position: right 74% top;
+        }
+
+        .banner-copy-centered {
+            font-size: 1.4rem;
+            width: 65%;
+            top: 40%;
+        }
     }
 
