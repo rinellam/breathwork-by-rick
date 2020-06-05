@@ -441,9 +441,10 @@ footer {
             background: 0;
             color: #88694b;
             cursor: pointer;
-            padding: .5em;
+            padding-right: .25em;
             margin-left: auto;
-            font-size: 2em;
+            margin-top: -.25em;
+            font-size: 3em;
         }
 
     }
@@ -463,7 +464,7 @@ footer {
         }
 
         header {
-            padding: 2em 1em;
+            padding: 1em 1em;
         }
 
         .card-heading {
@@ -499,13 +500,13 @@ footer {
             font-size: 1.2rem;
         }
 
-        .logo-text {
-            display: none;
-        }
-
     }
 
     @media only screen and (max-width: 360px) {
+
+        .logo-text {
+            display; none;
+        }
 
         .banner-img {
             width: 100vw;
@@ -518,5 +519,6 @@ footer {
             width: 65%;
             top: 40%;
         }
+
     }
 
