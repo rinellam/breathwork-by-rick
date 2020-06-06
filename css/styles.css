@@ -43,7 +43,7 @@ img {
 }
 
 a {
-    color: #B44188;
+    color: #893168; /* option-1 */
     text-decoration: none;
 }
 
@@ -66,10 +66,6 @@ html {
 
 .shadow {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
-}
-
-.bkg-color {
-    background-color: #f2f3f4; /* for nav background */
 }
 
 /* Header & Navigation */
@@ -153,8 +149,24 @@ header {
 
 /* Banner Image and Text */
 
+/*.banner-img {
+    background-image: url('/img/option-1/breathwork-by-rick-banner01-1366x700-photo-by-nine-kopfer-min.jpg');
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 6em;
+}*/
+
 .banner-img {
-    background-image: url('/img/breathwork-banner-img-1366x700--min.jpg');
+    background:
+    linear-gradient(217deg, rgba(226,201,119,.7), rgba(226,201,119,0) 70.71%),
+    linear-gradient(127deg, rgba(160,130,102,.9), rgba(160,130,102,0) 70.71%),
+    /* linear-gradient(336deg, rgba(137,49,104,.8), rgba(137,49,104,0) 70.71%), option-1 */
+    /* linear-gradient(336deg, rgba(36,110,185,.8), rgba(36,110,185,0) 70.71%), option-2 */
+    linear-gradient(336deg, rgba(192,87,70,.9), rgba(192,87,70,0) 70.71%), /* option-3 */
+        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
     width: 100vw;
     height: 90vh;
     background-repeat: no-repeat;
@@ -309,7 +321,7 @@ textarea {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: #B44188;
+    background: #893168 ; /* option-1 */
     color: #fff;
 }
 
@@ -359,7 +371,7 @@ footer {
 
 .fa-facebook-square:hover,
 .fa-instagram:hover {
-    color: rgba(255,255,255, 0.5);
+    color: rgba(255,255,255, 0.4);
 }
 
 .footer-date-contain {
@@ -516,7 +528,7 @@ footer {
         }
         
         .nav-link {
-            color: #B44188;
+            color: #893168; /* option-1 */
             text-decoration: none;
             font-size: 2rem;
             font-weight: 700;
@@ -531,7 +543,7 @@ footer {
         .close-nav {
             border: 0;
             background: 0;
-            color: #B44188;
+            color: #893168; /* option-1 */
             font-weight: 700;
             font-size: 3rem;
             cursor: pointer;
