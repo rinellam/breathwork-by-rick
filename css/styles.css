@@ -5,6 +5,30 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito', sans-serif;
 */
 
+/* 
+Color Optio 1
+#e2c977 Buff
+#a1a1a Eerie Black
+#ffffff White
+#a08266 Cafe Au Lait
+#893168 Amaranth MP
+
+Color Optio 2
+#e2c977 Buff
+#a1a1a Eerie Black
+#ffffff White
+#a08266 Cafe Au Lait
+#246eb9 Honolulu Blue
+
+
+Color Optio 3
+#e2c977 Buff
+#a1a1a Eerie Black
+#ffffff White
+#a08266 Cafe Au Lait
+#c05746 Cedar Chest
+*/
+
 /* Global */
 
 * {
@@ -38,6 +62,14 @@ html {
     line-height: 1.5;
     color: #1a1a1a;
     margin: 0;
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.bkg-color {
+    background-color: #f2f3f4; /* for nav background */
 }
 
 /* Header & Navigation */
@@ -129,8 +161,6 @@ header {
     background-size: cover;
     background-position: center;
     margin-bottom: 6em;
-
-    
 }
 
 .banner-copy-centered {
@@ -194,7 +224,8 @@ main {
     width: 64%;
 }
   
-.card-heading {
+.card-heading,
+.form-heading {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     margin-top: 0;
@@ -204,6 +235,82 @@ main {
     background:#E2C977;
     padding: 3em 5em;
     margin-bottom: 6em;
+}
+
+/* Form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-section {
+    width: 75%;
+    margin: 6em auto;
+}
+
+.form-contain {
+    width: 85%;
+    margin: 3em auto;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding: .35em;
+    font-family: inherit;
+}
+
+.fname-input,
+.lname-input,
+.ename-input,
+#message {
+    border-color: #eaeaea;
+}
+
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.btn-form {
+    justify-self: end;
+}
+
+.contact-form .btn-form {
+    padding: .5em 1.75em;
+    font-size: 1rem;
+}
+
+/* buttons */
+
+.btn {
+    padding: .5em 1.75em;
+    font-weight: 700;
+    margin-top: .5em;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #B44188;
+    color: #fff;
+    width: 100px;
+    height: 44px;
+    border-radius: 3px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #B44188;
+    color: #fff;
 }
 
 /* footer */
