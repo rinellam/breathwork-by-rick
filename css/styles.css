@@ -43,7 +43,7 @@ img {
 }
 
 a {
-    color: #893168; /* option-1 */
+    color: #a4866a; /* option-1 */
     text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:focus {
-    outline-color: #B44188;
+    outline-color: #a4866a;
 }
 
 html {
@@ -87,7 +87,7 @@ html {
     font-size: 1.2rem;
     padding-left: 1em;
     text-transform:none;
-    color: #a4866a;
+    color: #1a1a1a;
 }
 
 /* Navigation */
@@ -146,9 +146,6 @@ header {
     text-decoration: none;
 }
 
-
-
-
 /* Banner Image and Text */
 
 /*.banner-img {
@@ -205,6 +202,12 @@ main {
     margin-bottom: 6em;
 }
 
+.card-form {
+    display: flex;
+    align-items: flex-start;
+    margin: 6em auto 0;
+}
+
 .card-img-reverse {
     display: flex;
     flex-direction: row-reverse;
@@ -238,11 +241,16 @@ main {
     width: 64%;
 }
   
-.card-heading,
-.form-heading {
+.card-heading {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
-    margin-top: 0;
+    margin: 0;
+}
+
+.card-sub-heading {
+    font-family: 'Montserrat', serif;
+    font-size: 1.4rem;
+    margin: 0;
 }
   
 .card-text {
@@ -296,7 +304,7 @@ main {
 
 .form-contain {
     width: 85%;
-    margin: 3em auto;
+    margin: 0 auto;
 }
 
 label {
@@ -345,7 +353,7 @@ textarea {
 }
 
 .btn-primary {
-    background: #B44188;
+    background: #a4866a;
     color: #fff;
     width: 100px;
     height: 44px;
@@ -354,7 +362,7 @@ textarea {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: #893168 ; /* option-1 */
+    background-color: rgba(164, 134, 106, 0.8);
     color: #fff;
 }
 
@@ -433,6 +441,10 @@ footer {
 
     @media only screen and (max-width: 768px) {
 
+        #main-google-calendar {
+            width: 90%;
+        }
+
         .logo-text {
             font-size: 1rem;
         }
@@ -461,9 +473,14 @@ footer {
         .card-heading {
             font-size: 1.8rem;
         }
+
+        .card-sub-heading {
+            font-size: 1.2rem;
+        }
      
         .card-img,
-        .card-img-reverse {
+        .card-img-reverse,
+        .card-form {
             flex-direction: column;
         }
 
@@ -487,6 +504,10 @@ footer {
         }
 
         .contact-form-section {
+            width: 100%;
+        }
+
+        .form-contain {
             width: 100%;
         }
 
@@ -625,6 +646,22 @@ footer {
 
         .card-heading {
             font-size: 1.4rem;
+        }
+
+        .card-sub-heading {
+            font-size: 1rem;
+        }
+
+        .card-form {
+            margin: 3em auto 0;
+        }
+
+        .contact-form-section {
+            margin: 3em auto;
+        }
+
+        textarea {
+            height: 200px;
         }
 
         .banner-img,
