@@ -452,7 +452,10 @@ footer {
         .banner-img {
             width: 100vw;
             height: 80vh;
-            background-position: right 72% top;
+            background-position: top 0 right 25%!important;
+            background-position-x: 25%!important;
+            background-position-y: 0%;
+            background-origin: content-box;
         }
 
         .banner-copy-centered {
@@ -698,7 +701,7 @@ footer {
     @media only screen and (max-width: 360px) {
 
         .logo-text {
-            display; none;
+            display: none;
         }
 
         .banner-img {
