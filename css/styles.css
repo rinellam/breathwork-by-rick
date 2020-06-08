@@ -592,7 +592,7 @@ footer {
         }
         
         .nav-link {
-            color: #893168; /* option-1 */
+            color: #e2c977; /* option-1 */
             text-decoration: none;
             font-size: 2rem;
             font-weight: 700;
@@ -607,7 +607,7 @@ footer {
         .close-nav {
             border: 0;
             background: 0;
-            color: #893168; /* option-1 */
+            color: #e2c977; /* option-1 */
             font-weight: 700;
             font-size: 3rem;
             cursor: pointer;
