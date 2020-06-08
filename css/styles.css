@@ -160,11 +160,13 @@ header {
 
 .banner-img {
     background:
-    linear-gradient(217deg, rgba(226,201,119,.7), rgba(226,201,119,0) 70.71%),
+    /*linear-gradient(217deg, rgba(226,201,119,.7), rgba(226,201,119,0) 70.71%),
     linear-gradient(127deg, rgba(160,130,102,.9), rgba(160,130,102,0) 70.71%),
-    /* linear-gradient(336deg, rgba(137,49,104,.8), rgba(137,49,104,0) 70.71%), option-1 */
-    /* linear-gradient(336deg, rgba(36,110,185,.8), rgba(36,110,185,0) 70.71%), option-2 */
-    linear-gradient(336deg, rgba(192,87,70,.9), rgba(192,87,70,0) 70.71%), /* option-3 */
+    linear-gradient(336deg, rgba(192,87,70,.9), rgba(192,87,70,0) 70.71%),*/
+
+    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
         url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
     width: 100vw;
     height: 90vh;
@@ -172,6 +174,7 @@ header {
     background-size: cover;
     background-position: center;
     margin-bottom: 6em;
+    opacity: 90%;
 }
 
 .banner-copy-centered {
