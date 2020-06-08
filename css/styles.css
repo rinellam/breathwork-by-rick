@@ -68,6 +68,10 @@ html {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
+.nav-bkg-color {
+    background: #f2f3f4;
+}
+
 /* Header & Navigation */
 
 .logo-container {
@@ -148,6 +152,58 @@ header {
 
 /* Banner Image and Text */
 
+.card-background01-img { /* option-1 */
+    background:
+    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 90%;
+}
+
+.card-background02-img { /* option-2 */
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 90%;
+}
+
+.card-background03-img { /* option-3 */
+    background:
+    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(127deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 90%;
+}
+
+section .card-background01-img,
+section .card-background02-img,
+section .card-background03-img {
+    width: 35%;
+    margin-right: 2em;
+}
+
 /*.banner-img {
     background-image: url('/img/option-1/breathwork-by-rick-banner01-1366x700-photo-by-nine-kopfer-min.jpg');
     width: 100vw;
@@ -222,7 +278,7 @@ main {
 
 .img-margin-left,
 .img-margin-right {
-    min-width : 200px;
+    min-width: 200px;
     width: 35%;
     height: auto;
 }
@@ -443,6 +499,24 @@ footer {
     }
 
     @media only screen and (max-width: 768px) {
+
+        /* start - ipad and mobile - make the height of the background image responsibe */
+
+        section .card-background01-img,
+        section .card-background02-img,
+        section .card-background03-img {
+            width: 100%;
+            margin-bottom: 2em;
+        }
+
+        .card-background01-img,
+        .card-background02-img,
+        .card-background03-img {
+            padding-top: 73%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+        }
+
+        /* end - ipad and mobile - make the height of the background image responsibe */
+
 
         #main-google-calendar {
             width: 90%;
