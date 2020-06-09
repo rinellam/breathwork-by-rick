@@ -48,6 +48,7 @@ a {
 }
 
 a:hover {
+    color: #893168;
     text-decoration: underline;
 }
 
@@ -152,41 +153,71 @@ header {
 
 /* Banner Image and Text */
 
-.card-background01-img { /* option-1 */
+.card-background01-img { /* my motivations image */
     background:
-    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-motivations03-550x400-photo-by-zoltan-tasi-min.jpg');
     width: 100%;
     height: 0;
     padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 90%;
+    opacity: 100%;
 }
 
-.card-background02-img { /* option-2 */
+.card-background02-img { /* about me */
     background:
-    linear-gradient(127deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    linear-gradient(217deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    linear-gradient(217deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-about-me-550x400-photo-by-norman-tothabout-me-min.jpg');
     width: 100%;
     height: 0;
     padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 90%;
+    opacity: 100%;
 }
 
-.card-background03-img { /* option-3 */
+.card-background03-img { /* whay it matters image */
     background:
-    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    linear-gradient(127deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-why-it-matters-550x400-photo-by-brian-mann-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+.card-background04-img { /* calendar image */
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(217deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-calendar-550x400-photo-by-keegan-houser-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+.card-background05-img { /* contact image*/
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
         url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
     width: 100%;
     height: 0;
@@ -194,12 +225,14 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 section .card-background01-img,
 section .card-background02-img,
-section .card-background03-img {
+section .card-background03-img,
+section .card-background04-img,
+section .card-background05-img {
     width: 35%;
     margin-right: 2em;
 }
@@ -421,7 +454,7 @@ textarea {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: rgba(164, 134, 106, 0.8);
+    background-color:#893168;
     color: #fff;
 }
 
@@ -471,7 +504,7 @@ footer {
 
 .fa-facebook-square:hover,
 .fa-instagram:hover {
-    color: rgba(255,255,255, 0.4);
+    color: #893168;
 }
 
 .footer-date-contain {
@@ -504,14 +537,18 @@ footer {
 
         section .card-background01-img,
         section .card-background02-img,
-        section .card-background03-img {
+        section .card-background03-img,
+        section .card-background04-img,
+        section .card-background05-img {
             width: 100%;
             margin-bottom: 2em;
         }
 
         .card-background01-img,
         .card-background02-img,
-        .card-background03-img {
+        .card-background03-img,
+        .card-background04-img,
+        .card-background05-img {
             padding-top: 73%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
         }
 
