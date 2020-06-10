@@ -474,6 +474,22 @@ footer {
     padding: 2em 0;
 }
 
+ul.nav-list-footer {
+    align-items: center;
+    padding-right: 1em;
+}
+
+li.nav-item {
+    list-style: none;
+    letter-spacing: 0.15rem;
+}
+
+.current-footer { 
+    color: #62503e;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 /* Footer Text */
 
 .copy-footer {
