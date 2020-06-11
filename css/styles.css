@@ -57,6 +57,8 @@ COLOR PALETTE ////////////////////////////
 body {
     margin: 0;
     padding: 0;
+    /* Remove zoom on inputs for mobile */
+    font-size: 16px;
 }
 
 img {
@@ -111,7 +113,6 @@ main {
 }
 
 /* Remove zoom on inputs for mobile */
-
 input, select { 
     font-size: 100%; 
 }
