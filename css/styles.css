@@ -1,27 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@600&display=swap');
-/*
+
+/* FONTS ////////////////////////////
+
 font-family: 'Merriweather', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito', sans-serif;
 */
 
 /* 
-Color Optio 1
+COLOR PALETTE ////////////////////////////
+
 #e2c977 Buff
 #a1a1a Eerie Black
 #ffffff White
 #a08266 Cafe Au Lait
 #893168 Amaranth MP
+*/
 
-/* Global */
+/* CONTENTS ////////////////////////////
+
+1. GLOBAL
+    a. Buttons
+2. HEACDER
+    b. Logo
+    c. Navigation
+3. HOME
+    a. Card component
+    b. Card images
+    c. Card text
+    d. Banner images
+    e. Images
+        1. my motivation
+        2. about me
+        3. why it matters
+        4. calendar
+        5. contact
+        6. Testimonials
+4. CALENDAR
+    a. Google calendar
+5. CONTACT
+    a. form
+6. FOOTER
+    a. Footer text
+    b. Social Media icons
+7. MEDIA QUERIES
+*/
+
+
+/* 1. GLOBAL //////////////////////////// */
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 html, p {
@@ -31,13 +71,15 @@ html, p {
     color: #1a1a1a;
 }
 
-img {
-    width: 100%;
-    height: auto;
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 0;
 }
 
 a {
-    color: #a4866a; /* option-1 */
+    color: #a4866a;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 }
@@ -52,30 +94,88 @@ a:focus {
     outline-color: #a4866a;
 }
 
-h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-top: 0;
-}
-
 .shadow {
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
-.nav-bkg-color {
-    background: #f2f3f4;
+.current,
+.current a {
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-/* Header & Navigation */
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* - - Buttons - - */
+
+.btn {
+    padding: .5em 1.75em;
+    font-weight: 700;
+    margin-top: .5em;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #a4866a;
+    color: #fff;
+    width: 100px;
+    height: 44px;
+    border-radius: 3px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color:#893168;
+    color: #fff;
+}
+
+/* 2. HEADER */
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5em 3em 2.5em 3em;
+}
+
+/* - - Logo - - */
 
 .logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;;
 }
   
+
 .logo-img {
     width: 100px;
     height: auto;
@@ -90,40 +190,41 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
-/* Navigation */
-  
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5em 3em 2.5em 3em;
-}
+/* - - Navigation - -  */
 
 .nav {
     margin-top: .5em;
+}
+
+.nav-bkg-color {
+    background: #f2f3f4;
 }
 
 .open-nav,
 .close-nav {
     display: none;
 }
-/*
-.nav {
-    position: initial;
-}
-*/
     
 .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
 }
 
 .nav-link-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
 }
@@ -145,158 +246,45 @@ header {
     background: transparent;
 }
 
-.current,
-.current a {
-    color: #1a1a1a;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-}
+/* 3. HOME //////////////////////////// */
 
-/* Banner Image and Text */
-
-.card-background01-img { /* my motivations image */
-    background:
-    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
-    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-motivations03-550x400-photo-by-zoltan-tasi-min.jpg');
-    width: 100%;
-    height: 0;
-    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 100%;
-}
-
-.card-background02-img { /* about me */
-    background:
-    linear-gradient(217deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-about-me-550x400-photo-by-norman-tothabout-me-min.jpg');
-    width: 100%;
-    height: 0;
-    padding-top: 24.5%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 100%;
-}
-
-.card-background03-img { /* whay it matters image */
-    background:
-    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
-    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-why-it-matters-550x400-photo-by-brian-mann-min.jpg');
-    width: 100%;
-    height: 0;
-    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 100%;
-}
-
-.card-background04-img { /* calendar image */
-    background:
-    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
-    linear-gradient(217deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-calendar-550x400-photo-by-keegan-houser-min.jpg');
-    width: 100%;
-    height: 0;
-    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 100%;
-}
-
-.card-background05-img { /* contact image*/
-    background:
-    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
-    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
-    width: 100%;
-    height: 0;
-    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 100%;
-}
-
-section .card-background01-img,
-section .card-background02-img,
-section .card-background03-img,
-section .card-background04-img,
-section .card-background05-img {
-    width: 35%;
-    margin-right: 2em;
-}
-
-.banner-img {
-    background:
-    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
-    width: 100vw;
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 6em;
-    opacity: 90%;
-}
-
-.banner-copy-centered {
-    position: relative;
-    font-family: 'Merriweather', serif;
-    font-size: 3rem;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFFFFF;
-    text-align: center;
-}
-
-
-/* Main Content */
-  
-main {
-    width: 70%;
-    margin: 0 auto;
-}
-
-/* Cards */
+/* - - Card Component - - */
 
 .card-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-bottom: 6em;
 }
 
 .card-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin: 6em auto 0;
 }
 
 .card-img-reverse {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-bottom: 6em;
 }
 
-/* card Images */ 
+/* - - Card Images - - */ 
 
 .img-margin-left,
 .img-margin-right {
@@ -313,12 +301,19 @@ main {
     margin-right: 2em;
 }
 
-/* Card Text */
+/* - - Card Text - - */
   
 .card-text-contain {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 64%;
 }
 
@@ -349,18 +344,321 @@ main {
     margin-bottom: 6em;
 }
 
-/* calendar */
+/* - - Banner Image - - */
+
+.banner-img {
+    background:
+    -o-linear-gradient(233deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(323deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
+    background:
+    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 6em;
+    opacity: 90%;
+}
+
+.banner-copy-centered {
+    position: relative;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* - - Images - - */
+
+/* - - My Motivation - - */
+
+.card-background01-img { /* My Motivations image */
+    background:
+    -o-linear-gradient(323deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(233deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-motivations03-550x400-photo-by-zoltan-tasi-min.jpg');
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-motivations03-550x400-photo-by-zoltan-tasi-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+/* - - About Me - - */
+
+.card-background02-img { /* About Me image */
+    background:
+    -o-linear-gradient(233deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(323deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-about-me-550x400-photo-by-norman-tothabout-me-min.jpg');
+    background:
+    linear-gradient(217deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-about-me-550x400-photo-by-norman-tothabout-me-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 24.5%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+/* - - Why It Matters image - - */
+
+.card-background03-img { /* Why It Matters image */
+    background:
+    -o-linear-gradient(323deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(233deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-why-it-matters-550x400-photo-by-brian-mann-min.jpg');
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-why-it-matters-550x400-photo-by-brian-mann-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+/* - - Calenar image - - */
+
+.card-background04-img { /* Calendar image */
+    background:
+    -o-linear-gradient(323deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(233deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-calendar-550x400-photo-by-keegan-houser-min.jpg');
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(217deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-calendar-550x400-photo-by-keegan-houser-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+/* - - Contact Image - - */
+
+.card-background05-img { /* Contact image*/
+    background:
+    -o-linear-gradient(323deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(233deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    background:
+    linear-gradient(127deg, rgba(255,204,0,.5), rgba(255,204,0,0) 70.71%),
+    linear-gradient(217deg, rgba(0,195,227,.5), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.5), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-contact-photo-550x400-by-adam-solomon-min.jpg');
+    width: 100%;
+    height: 0;
+    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 100%;
+}
+
+section .card-background01-img,
+section .card-background02-img,
+section .card-background03-img,
+section .card-background04-img,
+section .card-background05-img {
+    width: 35%;
+    margin-right: 2em;
+}
+
+/* - - Testimonials - - */
+
+.testimonial-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #f2f3f4;
+    width: 100%;
+    margin-bottom: 6em;
+}
+
+#testimonial-slider{
+    padding: 0px 20px 20px 20px;
+    background: #f2f3f4;
+    text-align: center;  
+}
+
+.owl-buttons{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+}
+.owl-prev,
+.owl-next{
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.owl-next{
+    left: auto;
+    right: 0;
+}
+.owl-buttons .owl-prev:before,
+.owl-buttons .owl-next:before{
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 60px;
+    font-weight: 900;
+    color: #cacaca;
+    line-height: 20px;
+    opacity: 0.8;
+}
+
+.owl-buttons .owl-next:before{
+    content: "\f105";
+}
+
+.owl-buttons .owl-prev:hover:before,
+.owl-buttons .owl-next:hover:before{
+    opacity: 1;
+}
+
+.owl-theme .owl-controls .owl-buttons div{
+    background: transparent;
+}
+
+.owl-theme .owl-controls{
+    margin-top: 40px;
+}
+
+.owl-theme .owl-controls .owl-page span{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #e2c977;
+    background: url("/img/option-1/stephanie-b-testimonials-img001.jpg") no-repeat;
+    background-size: cover;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.owl-theme .owl-controls .owl-page:nth-child(2) span{
+    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
+    background-size: cover;
+}
+
+.owl-theme .owl-controls .owl-page:nth-child(3) span{
+    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
+    background-size: cover;
+}
+
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    opacity: 0.5;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page.active:hover span{
+    border-color: #893168;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 5000px){
+    .conrtainer-styling {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .testimonial-wrapper {
+        margin-bottom: 5em;
+    }
+}
+
+@media only screen and (max-width: 414px){
+
+    .testimonial-wrapper {
+        margin-bottom: 3em;
+    }
+    
+    .owl-theme .owl-controls .owl-page span {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    
+    .owl-theme .owl-controls .owl-page span {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 4. CALENDAR //////////////////////////// */
 
 .calendar-contain {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 6em 0;
     width: 100%;
     height: auto;
 }
 
-/* Responsive iFrame */
+/* - - Responsive iFrame for Google Calendar - - */
 
 .responsive-iframe-container {
     position: relative;
@@ -370,9 +668,9 @@ main {
     overflow: hidden;
     }
     
-    .responsive-iframe-container iframe,
-    .vresponsive-iframe-container object,
-    .vresponsive-iframe-container embed {
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -380,11 +678,18 @@ main {
     height: 100%;
     }
 
-/* Form */
+/* 5. CONTACT //////////////////////////// */
+
+/* - - Form - - */
 
 .contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .contact-form-section {
@@ -416,14 +721,14 @@ textarea {
     border-color: #eaeaea;
 }
 
-
 textarea {
     resize: none;
     height: 150px;
 }
 
 .btn-form {
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
 }
 
 .contact-form .btn-form {
@@ -431,32 +736,7 @@ textarea {
     font-size: 1rem;
 }
 
-/* buttons */
-
-.btn {
-    padding: .5em 1.75em;
-    font-weight: 700;
-    margin-top: .5em;
-    text-decoration: none;
-    border: 0;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: #a4866a;
-    color: #fff;
-    width: 100px;
-    height: 44px;
-    border-radius: 3px;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color:#893168;
-    color: #fff;
-}
-
-/* footer */
+/* 6. FOOTER //////////////////////////// */
   
 footer {
     background: #1a1a1a;
@@ -464,14 +744,22 @@ footer {
 }
 
 .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 2em 0;
 }
-
 
 li.nav-item {
     font-size: 1rem;
@@ -487,7 +775,7 @@ li.nav-item {
     font-weight: 700;
 }
 
-/* Footer Text */
+/* - - Footer Text - - */
 
 .copy-footer {
     font-family: 'Montserrat', sans-serif;
@@ -502,7 +790,7 @@ li.nav-item {
     color: rgba(255,255,255, 0.4);
 }
 
-/* Social Media Icons */
+/* - - Social Media Icons - - */
 
 .fa {
     font-size: 48px!important;
@@ -522,12 +810,19 @@ li.nav-item {
 }
 
 .footer-date-contain {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 }
 
-/* Media Queries */
+/* 7. MEDIA QUERIES //////////////////////////// */
 
     @media only screen and (max-width: 1024px) {
 
@@ -535,41 +830,18 @@ li.nav-item {
             font-size: 2.8rem;
         }
 
-        .card-text-contain {
-            width: 60%;
-        }
-
         .img-margin-left,
         .img-margin-right {
             width: 40%;
         }
+
+        .card-text-contain {
+            width: 60%;
+        }
+
     }
 
     @media only screen and (max-width: 768px) {
-
-        /* start - ipad and mobile - make the height of the background image responsibe */
-
-        section .card-background01-img,
-        section .card-background02-img,
-        section .card-background03-img,
-        section .card-background04-img,
-        section .card-background05-img {
-            width: 100%;
-            margin-bottom: 2em;
-        }
-
-        .card-background01-img,
-        .card-background02-img,
-        .card-background03-img,
-        .card-background04-img,
-        .card-background05-img {
-            padding-top: 73%;       /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-        }                           /* end - ipad and mobile - make the height of the background image responsibe */
-
-
-        #main-google-calendar {
-            width: 90%;
-        }
 
         .logo-text {
             font-size: 1rem;
@@ -588,6 +860,25 @@ li.nav-item {
             font-size: 2.6rem;
         }
 
+        /* start - ipad and mobile - make the height of the background image responsibe */
+        section .card-background01-img,
+        section .card-background02-img,
+        section .card-background03-img,
+        section .card-background04-img,
+        section .card-background05-img {
+            width: 100%;
+            margin-bottom: 2em;
+        }
+
+        .card-background01-img,
+        .card-background02-img,
+        .card-background03-img,
+        .card-background04-img,
+        .card-background05-img {
+            padding-top: 73%;       /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+        }                           /* end - ipad and mobile - make the height of the background image responsibe */
+
+
         .img-margin-left,
         .img-margin-right {
             width: 100%;
@@ -595,7 +886,10 @@ li.nav-item {
         }
      
         .card-text-contain {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             width: 100%;
         }
 
@@ -610,7 +904,10 @@ li.nav-item {
         .card-img,
         .card-img-reverse,
         .card-form {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         .banner-img,
@@ -632,6 +929,10 @@ li.nav-item {
             margin-left: 0;
         }
 
+        #main-google-calendar {
+            width: 90%;
+        }
+
         .contact-form-section {
             width: 100%;
         }
@@ -644,39 +945,11 @@ li.nav-item {
 
     @media only screen and (max-width: 600px) {
 
-        .banner-img {
-            width: 100vw;
-            height: 100vh;
-            background-position: right 80% top;
-        }
-
         header {
             padding: 2em;
         }
 
-        .logo-img {
-            width: 75px;
-            height: auto;
-        }
-
-        .navigation-list {
-            display: none;
-        }
-
-        .banner-copy-centered {
-            font-size: 2rem;
-        }
-
-        .card-heading {
-            font-size: 1.6rem;
-        }
-
-        main {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        /* new navigation */
+        /* - - Navigation - - */
 
         .open-nav,
         .close-nav {
@@ -692,24 +965,45 @@ li.nav-item {
             right: 0;
             bottom: 0;
             left: 100%;
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                    transform: translateX(0);
+            -webkit-transition: -webkit-transform 250ms;
+            transition: -webkit-transform 250ms;
+            -o-transition: transform 250ms;
             transition: transform 250ms;
+            transition: transform 250ms, -webkit-transform 250ms;
             z-index: 999;
         }
         
         .navigation-open {
-            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                    transform: translateX(-100%);
         }
         
         .nav-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             list-style: none;
             margin: 0;
             padding: 0;
             height: 100%;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+
+        .navigation-list {
+            display: none;
         }
         
         .nav-link {
@@ -751,9 +1045,37 @@ li.nav-item {
             font-size: 3em;
         }
 
+        main {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .banner-img {
+            width: 100vw;
+            height: 100vh;
+            background-position: right 80% top;
+        }
+
+        .logo-img {
+            width: 75px;
+            height: auto;
+        }
+
+        .banner-copy-centered {
+            font-size: 2rem;
+        }
+
+        .card-heading {
+            font-size: 1.6rem;
+        }
+
     }
 
     @media only screen and (max-width: 414px) {
+
+        header {
+            padding: 1em 1em;
+        }
 
         .banner-img {
             width: 100vw;
@@ -767,8 +1089,19 @@ li.nav-item {
             top: 40%;
         }
 
-        header {
-            padding: 1em 1em;
+        .banner-img,
+        .card-img,
+        .card-img-reverse,
+        .card-text {
+            margin-bottom: 3em;
+        }
+
+        .img-margin-left,
+        .img-margin-right {
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 1em;
+            margin-left: 0;
         }
 
         .card-heading {
@@ -789,21 +1122,6 @@ li.nav-item {
 
         textarea {
             height: 200px;
-        }
-
-        .banner-img,
-        .card-img,
-        .card-img-reverse,
-        .card-text {
-            margin-bottom: 3em;
-        }
-
-        .img-margin-left,
-        .img-margin-right {
-            margin-top: 0;
-            margin-right: 0;
-            margin-bottom: 1em;
-            margin-left: 0;
         }
         
     }
