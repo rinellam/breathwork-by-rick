@@ -71,11 +71,8 @@ html, p {
     color: #1a1a1a;
 }
 
-h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-top: 0;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 a {
@@ -252,6 +249,43 @@ header {
     background: transparent;
 }
 
+/* - - Banner Image - - */
+
+.banner-img {
+    background:
+    -o-linear-gradient(233deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    -o-linear-gradient(323deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    -o-linear-gradient(114deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
+    background:
+    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
+    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
+        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 6em;
+    opacity: 90%;
+}
+
+.banner-copy-centered {
+    position: relative;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+}
+
 /* 3. HOME //////////////////////////// */
 
 /* - - Card Component - - */
@@ -326,12 +360,16 @@ header {
 .card-heading {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
     margin: 0;
 }
 
 .card-heading-solo {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
     margin-top: 1em;
     text-align: center;
     margin-bottom: 1em;
@@ -340,50 +378,17 @@ header {
 .card-sub-heading {
     font-family: 'Montserrat', serif;
     font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
     margin: 0;
 }
   
 .card-text {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     background:#E2C977;
     padding: 3em 5em;
     margin-bottom: 6em;
-}
-
-/* - - Banner Image - - */
-
-.banner-img {
-    background:
-    -o-linear-gradient(233deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    -o-linear-gradient(323deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    -o-linear-gradient(114deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
-    background:
-    linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
-    linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
-        url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
-    width: 100vw;
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 6em;
-    opacity: 90%;
-}
-
-.banner-copy-centered {
-    position: relative;
-    font-family: 'Merriweather', serif;
-    font-size: 3rem;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    color: #FFFFFF;
-    text-align: center;
 }
 
 /* - - Images - - */
@@ -769,7 +774,8 @@ footer {
     padding: 2em 0;
 }
 
-li.nav-item {
+.nav-item {
+    font-family: 'Montserrat', serif;
     font-size: 1rem;
     list-style: none;
     letter-spacing: 0.15rem;
@@ -937,12 +943,17 @@ li.nav-item {
             margin-left: 0;
         }
 
+        .owl-buttons {
+            bottom: 30%;
+        }
+
         #main-google-calendar {
             width: 90%;
         }
 
         .contact-form-section {
             width: 100%;
+            padding: 2em;
         }
 
         .form-contain {
@@ -1118,6 +1129,10 @@ li.nav-item {
 
         .card-sub-heading {
             font-size: 1rem;
+        }
+
+        .owl-buttons {
+            bottom: 20%;
         }
 
         .card-form {
