@@ -13,28 +13,15 @@ Color Optio 1
 #a08266 Cafe Au Lait
 #893168 Amaranth MP
 
-Color Optio 2
-#e2c977 Buff
-#a1a1a Eerie Black
-#ffffff White
-#a08266 Cafe Au Lait
-#246eb9 Honolulu Blue
-
-
-Color Optio 3
-#e2c977 Buff
-#a1a1a Eerie Black
-#ffffff White
-#a08266 Cafe Au Lait
-#c05746 Cedar Chest
-*/
-
 /* Global */
 
 * {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 img {
@@ -45,24 +32,31 @@ img {
 a {
     color: #a4866a; /* option-1 */
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:hover {
     color: #893168;
     text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:focus {
     outline-color: #a4866a;
 }
 
-html {
+html, p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
     color: #1a1a1a;
-    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 0;
 }
 
 .shadow {
@@ -147,6 +141,8 @@ header {
 .current,
 .current a {
     color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
 }
@@ -237,22 +233,8 @@ section .card-background05-img {
     margin-right: 2em;
 }
 
-/*.banner-img {
-    background-image: url('/img/option-1/breathwork-by-rick-banner01-1366x700-photo-by-nine-kopfer-min.jpg');
-    width: 100vw;
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 6em;
-}*/
-
 .banner-img {
     background:
-    /*linear-gradient(217deg, rgba(226,201,119,.7), rgba(226,201,119,0) 70.71%),
-    linear-gradient(127deg, rgba(160,130,102,.9), rgba(160,130,102,0) 70.71%),
-    linear-gradient(336deg, rgba(192,87,70,.9), rgba(192,87,70,0) 70.71%),*/
-
     linear-gradient(217deg, rgba(255,204,0,.6), rgba(255,204,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,195,227,.6), rgba(0,195,227,0) 70.71%),
     linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
@@ -332,11 +314,19 @@ main {
     justify-content: flex-start;
     width: 64%;
 }
-  
+
 .card-heading {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     margin: 0;
+}
+
+.card-heading-solo {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .card-sub-heading {
@@ -346,6 +336,7 @@ main {
 }
   
 .card-text {
+    font-family: 'Montserrat', sans-serif;
     background:#E2C977;
     padding: 3em 5em;
     margin-bottom: 6em;
@@ -475,6 +466,8 @@ footer {
 }
 
 ul.nav-list-footer {
+    font-family: 'Montserrat', serif;
+    font-size: 1rem;
     align-items: center;
     padding-right: 1em;
 }
@@ -493,6 +486,7 @@ li.nav-item {
 /* Footer Text */
 
 .copy-footer {
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 1.2rem;
 }
@@ -565,10 +559,8 @@ li.nav-item {
         .card-background03-img,
         .card-background04-img,
         .card-background05-img {
-            padding-top: 73%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
-        }
-
-        /* end - ipad and mobile - make the height of the background image responsibe */
+            padding-top: 73%;       /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+        }                           /* end - ipad and mobile - make the height of the background image responsibe */
 
 
         #main-google-calendar {
@@ -679,8 +671,6 @@ li.nav-item {
             width: 90%;
             margin: 0 auto;
         }
-
-       
 
         /* new navigation */
 
