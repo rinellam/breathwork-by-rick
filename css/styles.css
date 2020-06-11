@@ -113,6 +113,12 @@ main {
     margin: 0 auto;
 }
 
+/* Remove zoom on inputs for mobile */
+
+input, select { 
+    font-size: 100%; 
+}
+
 /* - - Buttons - - */
 
 .btn {
@@ -695,6 +701,8 @@ section .card-background05-img {
 .contact-form-section {
     width: 75%;
     margin: 6em auto;
+    background: #f2f3f4;
+    padding: 4em 0;
 }
 
 .form-contain {
