@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #cccccc;
+    background: #f2f3f4;
     width: 100%;
     margin-bottom: 6em;
 
@@ -21,7 +21,7 @@ body {
 
 #testimonial-slider{
     padding: 0px 20px 20px 20px;
-    background: #fff;
+    background: #f2f3f4;
     text-align: center;
      
 }
@@ -108,11 +108,11 @@ body {
     transition: all 0.3s ease-in-out 0s;
 }
 .owl-theme .owl-controls .owl-page:nth-child(2) span{
-    background: url("img-2.jpg") no-repeat;
+    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
     background-size: cover;
 }
 .owl-theme .owl-controls .owl-page:nth-child(3) span{
-    background: url("img-3.jpg") no-repeat;
+    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
     background-size: cover;
 }
 .owl-theme .owl-controls.clickable .owl-page:hover span{
@@ -124,13 +124,25 @@ body {
     opacity: 1;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 5000px){
     .conrtainer-styling {
         width: 100%;
     }
 }
 
+
+
+@media only screen and (max-width: 768px){
+    .testimonial-wrapper {
+        margin-bottom: 5em;
+    }
+}
+
 @media only screen and (max-width: 414px){
+
+    .testimonial-wrapper {
+        margin-bottom: 3em;
+    }
     
     .owl-theme .owl-controls .owl-page span {
         width: 60px;

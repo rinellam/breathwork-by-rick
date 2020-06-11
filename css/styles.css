@@ -24,6 +24,13 @@ body {
     padding: 0;
 }
 
+html, p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -43,13 +50,6 @@ a:hover {
 
 a:focus {
     outline-color: #a4866a;
-}
-
-html, p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #1a1a1a;
 }
 
 h1, h2, h3 {
@@ -81,12 +81,13 @@ h1, h2, h3 {
     height: auto;
 }
 
-.logo-text {
+.logo-text a {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: .50em;
     padding-left: 1em;
-    text-transform:none;
     color: #1a1a1a;
+    text-decoration: none;
 }
 
 /* Navigation */
@@ -96,17 +97,22 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2em;
+    padding: 2.5em 3em 2.5em 3em;
+}
+
+.nav {
+    margin-top: .5em;
 }
 
 .open-nav,
 .close-nav {
     display: none;
 }
-    
+/*
 .nav {
     position: initial;
 }
+*/
     
 .nav-list {
     display: flex;
@@ -124,6 +130,7 @@ header {
 
 .nav-list li {
     list-style: none;
+    padding-left: 1.25em;
 }
     
 .nav-item {
@@ -172,7 +179,7 @@ header {
         url('/img/option-1/breathwork-by-rick-about-me-550x400-photo-by-norman-tothabout-me-min.jpg');
     width: 100%;
     height: 0;
-    padding-top: 25%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
+    padding-top: 24.5%; /* (img-height / img-width * container-width) */ /* (853 / 1280 * 100) */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -465,19 +472,16 @@ footer {
     padding: 2em 0;
 }
 
-ul.nav-list-footer {
-    font-family: 'Montserrat', serif;
-    font-size: 1rem;
-    align-items: center;
-    padding-right: 1em;
-}
 
 li.nav-item {
+    font-size: 1rem;
     list-style: none;
     letter-spacing: 0.15rem;
+    margin: 0 auto;
 }
 
 .current-footer { 
+    font-family: 'Montserrat', serif;
     color: #62503e;
     text-transform: uppercase;
     font-weight: 700;
