@@ -601,15 +601,15 @@ section .card-background05-img {
 }
 
 .owl-theme .owl-controls .owl-page:nth-child(2) span{
-    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
+    background: url("/img/option-1/angela-b-img-testimonials002.jpg") no-repeat;
     background-size: cover;
 }
-
+/*
 .owl-theme .owl-controls .owl-page:nth-child(3) span{
     background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
     background-size: cover;
 }
-
+*/
 .owl-theme .owl-controls.clickable .owl-page:hover span{
     opacity: 0.5;
 }
