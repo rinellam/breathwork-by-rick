@@ -93,6 +93,10 @@ a:focus {
     outline-color: #a4866a;
 }
 
+.bold-font {
+    font-weight: 700;
+}
+
 .shadow {
     -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
             box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
@@ -914,6 +918,7 @@ footer {
 
         .card-sub-heading {
             font-size: 1.2rem;
+            font-weight: 700;
         }
      
         .card-img,
