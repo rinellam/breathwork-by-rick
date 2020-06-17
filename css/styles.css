@@ -858,10 +858,19 @@ footer {
             width: 40%;
         }
 
+        .card-background01-img,
+        .card-background02-img,
+        .card-background03-img,
+        .card-background04-img,
+        .card-background05-img {
+            padding-top: 25.2%;
+        }
+
         .card-heading {
             font-size: 1.5em; /* 24 / 16 */ 
             line-height: 1em; /* 24 / 24 */ 
             margin-bottom: 1em; /* 24 / 24 */ 
+            margin-top: -0.15em;
         }
 
         .card-heading-solo {
