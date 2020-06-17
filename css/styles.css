@@ -59,6 +59,8 @@ body {
     padding: 0;
     /* Remove zoom on inputs for mobile */
     font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 img {
@@ -366,8 +368,8 @@ header {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     font-weight: 700;
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.8;
+    margin-top: -16px; /* correction for lineoheight */
 }
 
 .card-heading-solo {
@@ -914,6 +916,8 @@ footer {
 
         .card-heading {
             font-size: 1.8rem;
+            margin-top: 0;
+            line-height: 1.8;
         }
 
         .card-sub-heading {
