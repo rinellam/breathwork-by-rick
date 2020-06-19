@@ -95,11 +95,6 @@ a:focus {
     font-weight: 700;
 }
 
-.shadow {
-    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
-            box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
-}
-
 .current,
 .current a {
     color: #1a1a1a;
@@ -604,7 +599,7 @@ section .card-background02-img {
     height: 80px;
     border-radius: 50%;
     border: 2px solid #e2c977;
-    background: url("/img/option-1/stephanie-b-testimonials-img001.jpg") no-repeat;
+    background: url("/img/option-1/stephanie-b-img-testimonials-bw001.jpg") no-repeat;
     background-size: cover;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -612,15 +607,10 @@ section .card-background02-img {
 }
 
 .owl-theme .owl-controls .owl-page:nth-child(2) span{
-    background: url("/img/option-1/angela-b-img-testimonials002.jpg") no-repeat;
+    background: url("/img/option-1/angela-b-img-testimonials-bw002.jpg") no-repeat;
     background-size: cover;
 }
-/*
-.owl-theme .owl-controls .owl-page:nth-child(3) span{
-    background: url("/img/option-1/npc-man-testimonials-img004.jpg") no-repeat;
-    background-size: cover;
-}
-*/
+
 .owl-theme .owl-controls.clickable .owl-page:hover span{
     opacity: 0.5;
 }
@@ -796,11 +786,12 @@ footer {
     list-style: none;
     letter-spacing: 0.15rem;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 
 .current-footer { 
     font-family: 'Montserrat', serif;
-    color: #62503e;
+    color: rgba(255,255,255,.4);
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -856,6 +847,10 @@ footer {
 
     @media only screen and (max-width: 1024px) {
 
+        .nav-list li {
+            padding-left: 1em;
+        }
+
         .banner-copy-centered {
             font-size: 2.8rem;
         }
@@ -908,8 +903,8 @@ footer {
 
     @media only screen and (max-width: 768px) {
 
-        .logo-text {
-            font-size: 1rem;
+        .nav-list li {
+            padding-left: 0.90em;
         }
 
         .banner-img {
@@ -1075,11 +1070,18 @@ footer {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
-                    flex-direction: column;
+                    flex-direction: column;      
         }
 
         .navigation-list {
             display: none;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding-left: 0;
+            font-size: 2rem;
+            color: rgba(255,255,255,.4);
         }
         
         .nav-link {
@@ -1146,7 +1148,12 @@ footer {
     @media only screen and (max-width: 414px) {
 
         header {
-            padding: 1em 1em;
+            padding: 1em 1em 1em 1.75em;
+        }
+
+        .logo-text a {
+            font-family: 'Nunito', sans-serif;
+            font-size: .80rem;
         }
 
         .banner-img {
@@ -1210,7 +1217,7 @@ footer {
 
     @media only screen and (max-width: 360px) {
 
-        .logo-text {
+        .logo-text a {
             display: none;
         }
 
