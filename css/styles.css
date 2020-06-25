@@ -82,8 +82,8 @@ a {
 }
 
 a:hover {
-    color: #893168;
-    text-decoration: underline;
+    color: #b11073;
+    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -135,7 +135,7 @@ input, select {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color:#893168;
+    background-color: #b11073;
     color: #fff;
 }
 
@@ -155,7 +155,7 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 2.5em 3em 2.5em 3em;
+    padding: 2em 3em 2em 3em;
 }
 
 /* - - Logo - - */
@@ -237,6 +237,7 @@ header {
     
 .nav-item {
     margin-left: 1em;
+    font-weight: 700;
 }
     
 .nav-link {
@@ -261,12 +262,12 @@ header {
     linear-gradient(336deg, rgba(255,0,255,.6), rgba(255,0,255,0) 70.71%),
         url('/img/option-1/breathwork-by-rick-banner02-1366x700-photo-by-nine-kopfer-min.jpg');
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-bottom: 6em;
-    opacity: 90%;
+    margin-bottom: 8em;
+    opacity: 100%;
 }
 
 .banner-copy-centered {
@@ -285,6 +286,37 @@ header {
     line-height: 1.3;
 }
 
+/* banner font awesome chevron down with animation */
+
+.arrow {
+    position: absolute;
+    text-align: center;
+    bottom: 3%;
+    left: 47%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: rgba(255,255,255,.4);
+  }
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
 /* 3. HOME //////////////////////////// */
 
 /* - - Card Component - - */
@@ -296,7 +328,7 @@ header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 6em;
+    margin-bottom: 8em;
 }
 
 .card-form {
@@ -320,7 +352,7 @@ header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 6em;
+    margin-bottom: 8em;
 }
 
 /* - - Card Images - - */ 
@@ -388,7 +420,7 @@ margin-bottom: 1.142857142857143em; /* 24 / 21 */
     font-weight: 400;
     background:#E2C977;
     padding: 3em 5em;
-    margin-bottom: 6em;
+    margin-bottom: 8em;
 }
 
 /* - - Images - - */
@@ -531,14 +563,13 @@ section .card-background02-img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #f2f3f4;
+    background:	#E8E8E8;
     width: 100%;
-    margin-bottom: 6em;
+    margin-bottom: 8em;
 }
 
 #testimonial-slider{
     padding: 0px 20px 20px 20px;
-    background: #f2f3f4;
     text-align: center;  
 }
 
@@ -568,7 +599,7 @@ section .card-background02-img {
     font-weight: 900;
     font-size: 60px;
     font-weight: 900;
-    color: #cacaca;
+    color: #C0C0C0;
     line-height: 20px;
     opacity: 0.8;
 }
@@ -599,7 +630,7 @@ section .card-background02-img {
     height: 80px;
     border-radius: 50%;
     border: 2px solid #e2c977;
-    background: url("/img/option-1/stephanie-b-img-testimonials-bw001.jpg") no-repeat;
+    background: url('/img/option-1/stephanie-b-img-testimonials-bw001.jpg') no-repeat;
     background-size: cover;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -607,7 +638,7 @@ section .card-background02-img {
 }
 
 .owl-theme .owl-controls .owl-page:nth-child(2) span{
-    background: url("/img/option-1/angela-b-img-testimonials-bw002.jpg") no-repeat;
+    background: url('/img/option-1/angela-b-img-testimonials-bw002.jpg') no-repeat;
     background-size: cover;
 }
 
@@ -617,40 +648,8 @@ section .card-background02-img {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls .owl-page.active:hover span{
-    border-color: #893168;
+    border-color: #b11073;
     opacity: 1;
-}
-
-@media only screen and (max-width: 2560px){
-    .conrtainer-styling {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .testimonial-wrapper {
-        margin-bottom: 5em;
-    }
-}
-
-@media only screen and (max-width: 414px){
-
-    .testimonial-wrapper {
-        margin-bottom: 3em;
-    }
-    
-    .owl-theme .owl-controls .owl-page span {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media only screen and (max-width: 414px){
-    
-    .owl-theme .owl-controls .owl-page span {
-        width: 50px;
-        height: 50px;
-    }
 }
 
 /* 4. CALENDAR //////////////////////////// */
@@ -827,7 +826,7 @@ footer {
 
 .fa-facebook-square:hover,
 .fa-instagram:hover {
-    color: #893168;
+    color: #b11073;
 }
 
 .footer-date-contain {
@@ -845,10 +844,24 @@ footer {
 
 /* 7. MEDIA QUERIES //////////////////////////// */
 
+    @media only screen and (max-width: 2560px){
+        .conrtainer-styling {
+            width: 100%;
+        }
+    }
+
     @media only screen and (max-width: 1024px) {
 
         .nav-list li {
             padding-left: 1em;
+        }
+
+        .banner-img {
+            width: 100vw;
+            height: 90vh;
+            background-position: top 0 right 25%!important;
+            background-position-x: 25%!important;
+            background-position-y: 0%;
         }
 
         .banner-copy-centered {
@@ -901,19 +914,22 @@ footer {
 
     }
 
+    @media only screen and (max-width: 810px) {
+
+        .banner-img {
+            width: 100vw;
+            height: 90vh;
+            background-position: top 0 right 25%!important;
+            background-position-x: 25%!important;
+            background-position-y: 0%;
+        }
+
+    }
+
     @media only screen and (max-width: 768px) {
 
         .nav-list li {
             padding-left: 0.90em;
-        }
-
-        .banner-img {
-            width: 100vw;
-            height: 80vh;
-            background-position: top 0 right 25%!important;
-            background-position-x: 25%!important;
-            background-position-y: 0%;
-            background-origin: content-box;
         }
 
         .banner-copy-centered {
@@ -995,6 +1011,10 @@ footer {
             margin-left: 0;
         }
 
+        .testimonial-wrapper {
+            margin-bottom: 5em;
+        }
+
         .owl-buttons {
             bottom: 30%;
         }
@@ -1029,7 +1049,7 @@ footer {
 
         .nav {
             position: fixed;
-            background: #1a1a1a;
+            background: #1A1å;
             width: 100%;
             height: 100vh;
             top: 0;
@@ -1080,20 +1100,20 @@ footer {
         .nav-list li {
             list-style: none;
             padding-left: 0;
-            font-size: 2rem;
+            font-size: 1rem;
             color: rgba(255,255,255,.4);
         }
         
         .nav-link {
             color: #e2c977; /* option-1 */
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 1rem;
             font-weight: 700;
         }
         
         .nav-link:hover,
         .nav-link:focus {
-            color: #FFFFFF;
+            color: #b11073;
             text-decoration: underline;
         }
         
@@ -1109,18 +1129,22 @@ footer {
         }
         
         .close-nav:hover {
-            color:#FFFFFF;
+            color: #b11073;
         }
         
         .open-nav {
             border: 0;
             background: 0;
-            color: #88694b;
+            color: #a08266;
             cursor: pointer;
             padding-right: .25em;
             margin-left: auto;
             margin-top: -.25em;
             font-size: 3em;
+        }
+
+        .spacer {
+            padding-bottom: 1em;
         }
 
         main {
@@ -1143,6 +1167,11 @@ footer {
             font-size: 2rem;
         }
 
+        .arrow {	
+            left: 45.5%;	
+            bottom: 4%;	
+        }
+
     }
 
     @media only screen and (max-width: 414px) {
@@ -1158,7 +1187,7 @@ footer {
 
         .banner-img {
             width: 100vw;
-            height: 85vh;
+            height: 90vh;
             background-position: right 76% top;
         }
 
@@ -1183,6 +1212,16 @@ footer {
             margin-bottom: 3em;
         }
 
+        .testimonial-wrapper {
+            margin-bottom: 3em;
+        }
+        
+        
+        .owl-theme .owl-controls .owl-page span {
+            width: 60px;
+            height: 60px;
+        }
+
         .owl-buttons {
             bottom: 20%;
         }
@@ -1203,15 +1242,9 @@ footer {
 
     @media only screen and (max-width: 375px) {
 
-        .banner-img {
-            width: 100vw;
-            height: 85vh;
-            background-position: right 76% top;
-        }
         .card-text {
             padding: 2em;
             }
-    
 
     }
 
@@ -1222,8 +1255,6 @@ footer {
         }
 
         .banner-img {
-            width: 100vw;
-            height: 85vh;
             background-position: right 74% top;
         }
 
